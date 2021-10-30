@@ -1,9 +1,14 @@
-import React from 'react';
-import LoginPage from '@components/LoginPage';
-import MainStack from 'app/MainStack';
+import React from 'react'
+import MainStack from 'app/MainStack'
+import { Provider } from 'react-redux'
+import { store } from 'app/redux/store'
 
 const App = () => {
-  return <MainStack />;
-};
+    return (
+        <Provider store={store}>
+            <MainStack />
+        </Provider>
+    )
+}
 
-export default App;
+export default App
